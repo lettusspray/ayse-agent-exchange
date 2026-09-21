@@ -1,0 +1,11 @@
+name = "ayse-agent-exchange"
+main = "worker.js"
+compatibility_date = "2026-09-21"
+
+[[durable_objects.bindings]]
+name = "AYSE_STATE"
+class_name = "AyseState"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["AyseState"]
