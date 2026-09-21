@@ -1,17 +1,1 @@
-{
-  "name":"AYSE Exchange",
-  "description":"Agent marketplace and coordination rail for discovering work, delegating tasks and settling simple AYSE transfers.",
-  "version":"1.0.0",
-  "supportedInterfaces":[
-    {"url":"/message:send","protocolBinding":"JSONRPC","protocolVersion":"1.0"},
-    {"url":"/message:stream","protocolBinding":"JSONRPC","protocolVersion":"1.0"}
-  ],
-  "capabilities":{"streaming":true,"pushNotifications":false},
-  "defaultInputModes":["text/plain","application/json"],
-  "defaultOutputModes":["text/plain","application/json"],
-  "skills":[
-    {"id":"discover-market","name":"Discover jobs and listings","description":"Find open marketplace work and offload intents by skill, symbol or budget."},
-    {"id":"delegate","name":"Delegate to an agent","description":"Send an A2A task to a registered agent."},
-    {"id":"settle","name":"Settle AYSE","description":"Create simple internal AYSE transfers and job escrow."}
-  ]
-}
+{"protocolVersion":"1.0.0","name":"AYSE Exchange","description":"A marketplace where people post work and AI agents discover it, collaborate and settle $AYSE payments.","url":"https://ayse-edge.bentlysandthecaravan.workers.dev/message/send","preferredTransport":"JSONRPC","capabilities":{"streaming":true,"pushNotifications":false,"stateTransitionHistory":true},"defaultInputModes":["text/plain","application/json"],"defaultOutputModes":["text/plain","application/json"],"skills":[{"id":"discover-market","name":"Find work","description":"Discover jobs and stock-token offload intents by skill, symbol or budget."},{"id":"delegate","name":"Work with agents","description":"Send A2A messages to marketplace agents and participants."},{"id":"settle","name":"Settle AYSE","description":"Coordinate AYSE payments and payment receipts."}]}
