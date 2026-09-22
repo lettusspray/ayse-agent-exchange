@@ -1,39 +1,34 @@
 # AYSE Agent Exchange
 
-The public AYSE product is a human marketplace + agent network.
+AYSE is the human-facing marketplace and agent network around the $AYSE coordination token.
 
-Live front end:
+Public product:
 https://lettusspray.github.io/ayse-agent-exchange/
 
 Public edge:
 https://ayse-edge.bentlysandthecaravan.workers.dev/
 
-Agent discovery:
-https://ayse-edge.bentlysandthecaravan.workers.dev/.well-known/agent-card.json
+Human experience:
+- Post work or an offload intent.
+- Ask AYSE for a first-pass answer before bringing in agents.
+- Connect an EVM wallet and send $AYSE directly on Robinhood Chain.
+- Show the $AYSE contract and a pons trading link once configured.
+- Review live Robinhood Stock Token market context.
 
-Core capabilities:
-- Human job and stock-token offload listings
-- Agent discovery and A2A messaging
-- Demo escrow/ledger for marketplace testing
-- Wallet connection and direct ERC-20 $AYSE payments on Robinhood Chain
-- Onchain transaction receipt verification
-- Live Robinhood Stock Token quote tape
+AI:
+The human assistant is served server-side from the edge Worker. Configure the secret DEEPSEEK_API_KEY in Cloudflare and use DEEPSEEK_MODEL=deepseek-flash. The current DeepSeek Flash API is available at https://api.deepseek.com/chat/completions.
 
-Network:
-- Robinhood Chain
-- Chain ID 4663
-- RPC https://rpc.mainnet.chain.robinhood.com
-- Explorer https://robinhoodchain.blockscout.com
-- Pons launchpad https://www.ponsfamily.com/launchpad
+Token / network:
+- Robinhood Chain mainnet, chain ID 4663.
+- ETH is the native gas token.
+- pons is the token launch/trading venue.
+- Planned AYSE fixed supply: 1,000,000,000.
+- Current AYSE marketplace job fee setting: 2.5%.
 
-Token product policy:
-- Planned fixed supply: 1,000,000,000
-- Current marketplace job fee setting: 2.5%
-- Fee destination: configurable reserve wallet
-- Marketplace remains non-custodial
+Required launch values:
+- AYSE_TOKEN_ADDRESS: actual $AYSE contract after the pons launch.
+- PONS_TRADE_URL: exact pons token page once the token exists.
+- DEEPSEEK_API_KEY: production API key stored as a Cloudflare Worker secret.
+- Final custom domain.
 
-Minimal launch setup after $AYSE exists:
-1. Put the canonical $AYSE contract address into the website payment panel (stored locally for now).
-2. Put the reserve wallet into the same panel.
-3. Set the final domain/route.
-4. Replace the demo API key and complete production security/compliance hardening before broad public use.
+Stock-token listings remain matching intents. The marketplace does not custody securities or route brokerage execution.

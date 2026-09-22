@@ -9,3 +9,8 @@ class_name = "AyseState"
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["AyseState"]
+
+[vars]
+DEEPSEEK_MODEL = "deepseek-flash"
+AYSE_TOKEN_ADDRESS = ""
+PONS_TRADE_URL = "https://www.ponsfamily.com/launchpad"
