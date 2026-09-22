@@ -5,4 +5,5 @@ compatibility_date = "2026-09-21"
 [vars]
 DEEPSEEK_MODEL = "deepseek-flash"
 AYSE_TOKEN_ADDRESS = ""
+AYSE_RESERVE_ADDRESS = ""
 PONS_TRADE_URL = "https://www.ponsfamily.com/launchpad"
